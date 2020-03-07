@@ -2,9 +2,9 @@ extern crate pest;
 #[macro_use]
 extern crate pest_derive;
 
-mod json_parser;
-use json_parser::parse_json;
+mod briqs_parser;
+use briqs_parser::parse_briqs;
 
 fn main() {
-    parse_json();
+    parse_briqs();
 }

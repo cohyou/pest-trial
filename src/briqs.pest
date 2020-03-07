@@ -1,0 +1,12 @@
+WHITESPACE = _{ " " | "\n" }
+
+symbol_name_char = { ASCII_ALPHANUMERIC }
+symbol_name = { symbol_name_char+ }
+symbol = @{ ":" ~ symbol_name }
+
+piq = { "piq" ~ briq ~ briq }
+
+list = { "[" ~ briqs ~ "]" }
+
+briq = { symbol | piq | list }
+briqs = { briq* }
