@@ -1,6 +1,3 @@
-piq
-  [piq :first :second]
-  piq
-    []
-    :wowow
-:symsym
+:a [:ddd (:f :f) :fff f = :g [wwww] :h :i]
+:b
+d

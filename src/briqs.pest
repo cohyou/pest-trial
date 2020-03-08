@@ -4,9 +4,12 @@ symbol_name_char = { ASCII_ALPHANUMERIC }
 symbol_name = { symbol_name_char+ }
 symbol = @{ ":" ~ symbol_name }
 
-piq = { "piq" ~ briq ~ briq }
+label_char = { ASCII_ALPHANUMERIC }
+label = @{ label_char+ }
+
+piq = { "(" ~ briq ~ briq ~ ")" }
 
 list = { "[" ~ briqs ~ "]" }
 
-briq = { symbol | piq | list }
+briq = { ( ( label ~ "=" )? ~ symbol ~ (list | piq)? | label) }
 briqs = { briq* }
