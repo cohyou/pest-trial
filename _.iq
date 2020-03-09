@@ -1,3 +1,13 @@
-:a [:ddd (:f :f) :fff f = :g [wwww] :h :i]
-:b
-d
+V = :vec [
+  A = :id
+  B = :id
+  C = :id
+]
+
+:! [
+  :; [first = :. (:nno ~V)]
+  first  = :nno.~V
+  second = :nno.+.~V
+  third  = :nno.+.+.~V
+  fourth = :nno.+.+.+.~V
+]
